@@ -14,11 +14,7 @@ public class FirefoxTest {
 	@Test
 	public void firefox() throws MalformedURLException
 	{
-		DesiredCapabilities  cap =new DesiredCapabilities();
-		
-		cap.setBrowserName("chrome");
-		System.out.println(cap.getBrowserName());
-		WebDriver d=new RemoteWebDriver(new URL("http://192.168.0.132:5555"),cap);
+	        WebDriver d=new ChromeDriver();
 		d.get("https://www.google.com/");
 		d.findElement(By.name("q")).click();
 		

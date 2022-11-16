@@ -14,11 +14,7 @@ public class GoogleTest {
 	@Test
 	public void Homepage() throws MalformedURLException
 	{
-		DesiredCapabilities  cap =new DesiredCapabilities();
-		
-		cap.setBrowserName("MicrosoftEdge");
-		
-		WebDriver d=new RemoteWebDriver(new URL("http://192.168.0.109:4444"),cap);
+		WebDriver d=new ChromeDriver();
 		d.get("https://www.google.com/");
 		d.findElement(By.name("q")).click();
 		
